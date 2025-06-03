@@ -439,5 +439,36 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html>
+
+
+<div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+    <nav class="sidebar-nav">
+      <a href="#">Login</a>
+      <a href="#">Shop</a>
+      <a href="#">Sign Up</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('mobileSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+  </script>
